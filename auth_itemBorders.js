@@ -24,7 +24,7 @@ if(/^https:\/\/jhu-dmc\.libcal\.com\/equipment/.test(window.location.href)) {
     // --------------------------------------STOP EDITING CODE HERE ---------------------------------------- //
 
 
-    
+
     // Auth banner template element that will be inserted
     var authBanner = document.createElement("span");
     authBanner.classList.add("auth-banner");
