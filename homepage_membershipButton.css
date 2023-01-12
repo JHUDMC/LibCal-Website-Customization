@@ -1,0 +1,11 @@
+.membership-btn {
+    background-color: purple;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.membership-btn:hover {
+    background-color: #a569bd;
+}
