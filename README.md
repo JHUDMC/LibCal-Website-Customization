@@ -1,1 +1,1 @@
-"# LibCal-Website-Customization" 
+# LibCal-Website-Customization
