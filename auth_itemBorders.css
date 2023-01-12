@@ -20,3 +20,7 @@ span.auth-banner {
 div.auth-item-card{
     border: 4px solid #926aed;
 }
+img.auth-info-icon{
+    height: 60%;
+    padding-bottom: 2px;
+}

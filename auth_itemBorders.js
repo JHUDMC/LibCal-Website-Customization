@@ -8,6 +8,7 @@ Notes: Known bug that doesn't add banner to every item on the page. (border is f
 
 
 // Check for authed items on equipment pages only
+// (to preserve resources on other pages)
 if(/^https:\/\/jhu-dmc\.libcal\.com\/equipment/.test(window.location.href)) {
 
     // ----------------------------------------- EDIT CODE HERE  -------------------------------------------- //
@@ -24,10 +25,20 @@ if(/^https:\/\/jhu-dmc\.libcal\.com\/equipment/.test(window.location.href)) {
     ]; // list of all equipment IDs requiring authorization.
 
     // --------------------------------------STOP EDITING CODE HERE ---------------------------------------- //
-    // Auth banner template element that will be inserted
+   
+   
+    // Create auth banner template element that can be inserted
     var authBanner = document.createElement("span");
     authBanner.classList.add("auth-banner");
-    authBanner.innerHTML = "Auth Required*"; // Banner Text
+    // Banner Text
+    authBanner.innerHTML = "Auth Required "; // Intentional space at end
+    // Craete info icon to be inserted into banner (img)
+    var infoIcon = document.createElement("img");
+    infoIcon.classList.add("auth-info-icon");
+    // Icon image URL (from LibApps Image Manager Library)
+    infoIcon.src = "https://libapps.s3.amazonaws.com/customers/9396/images/icon_info.png";
+    // Insert info icon into banner
+    authBanner.insertAdjacentElement("beforeend", infoIcon);
     
     // Observe item cards for changes
     const targetNode = document;
@@ -45,7 +56,8 @@ if(/^https:\/\/jhu-dmc\.libcal\.com\/equipment/.test(window.location.href)) {
                 // Add border to card
                 pageAuthItems[i].classList.add("auth-item-card");
                 // Insert banner directly after the card's opening div tag
-                pageAuthItems[i].insertAdjacentElement("afterbegin", authBanner);
+                let authBannerClone = authBanner.cloneNode(true);
+                pageAuthItems[i].insertAdjacentElement("afterbegin", authBannerClone);
             };
         };
 
