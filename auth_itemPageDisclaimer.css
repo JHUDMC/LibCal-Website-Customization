@@ -1,0 +1,18 @@
+.auth-disclaimer-button {
+    background-color: #926aed;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+}
+
+.auth-disclaimer-button:hover {
+    background-color: #6c4cb5;
+}
+
+.auth-disclaimer {
+    color: #926aed;
+    font-weight: bold;
+    font-style: italic;
+}

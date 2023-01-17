@@ -4,13 +4,7 @@ Purpose: Adds a border to items requiring authorization
 Author: Mason Gareis (mason.gareis@gmail.com)
 Date Created: 01/11/2023
 */
-
-
-// Check for authed items on equipment pages only
-// (to preserve resources on other pages)
-if(/^https:\/\/jhu-dmc\.libcal\.com\/equipment/.test(window.location.href)) {
-
-    // ----------------------------------------- EDIT CODE HERE  -------------------------------------------- //
+// ----------------------------------------- EDIT CODE HERE  -------------------------------------------- //
     // If an item requires athorization, add the equipment ID to the bottom of this list.
     // Note: This is ***NOT THE BARCODE***. It is the LibCal specific equipment ***ID***!!!!!!!!!!!!!
     // This can be found in LibCal by going to:   StuStaff Libcal View --> Settings (gear icon) -->
@@ -60,7 +54,10 @@ if(/^https:\/\/jhu-dmc\.libcal\.com\/equipment/.test(window.location.href)) {
 
     // --------------------------------------STOP EDITING CODE HERE ---------------------------------------- //
    
-   
+
+// Check for authed items on equipment pages only
+// (to preserve resources on other pages)
+if(/^https:\/\/jhu-dmc\.libcal\.com\/equipment\?/.test(window.location.href) ||  /^https:\/\/jhu-dmc\.libcal\.com\/reserve/.test(window.location.href)) {
     // Create auth banner template element that can be inserted
     
     var authBanner = document.createElement("span");
