@@ -3,7 +3,6 @@ File: auth_itemBorders.js
 Purpose: Adds a border to items requiring authorization
 Author: Mason Gareis (mason.gareis@gmail.com)
 Date Created: 01/11/2023
-Notes: Known bug that doesn't add banner to every item on the page. (border is fine tho)
 */
 
 
@@ -18,33 +17,80 @@ if(/^https:\/\/jhu-dmc\.libcal\.com\/equipment/.test(window.location.href)) {
     //     "Spaces & Equipment" dropdown --> "Equipment & Categories" tab --> "ID" column 
     
     var masterAuthList = [
-        "147953",  // Yamaha PA Speaker System
-        "147967",  // Samson Portable PA Speaker System
-        "148352",  // Canon EOS 1D Mark IV DSLR
-        "136536"  // TEST!!!
+        "147953",  // Audio: PAs --- Yamaha PA Speaker System
+        "147967",  // Audio: PAs --- Samson Portable PA Speaker System
+        "148352",  // DSLR: Advanced --- Canon EOS 1D Mark IV DSLR
+        "148355",  // DSLR: Advanced --- Canon EOS R6 Mirrorless Camera
+        "148346",  // DSLR: Intro --- Canon EOS Rebel T5i DSLR
+        "148383",  // Lights: Intro LED --- Intro RGB LED Light Kit
+        "148451",  // Video: Vixia --- Canon Vixia HF R700
+        "148450",  // Video: Vixia --- Canon Vixia HF R50
+        "148447",  // Video: Vixia --- Canon Vixia HF M500
+        "148448",  // Video: XA30 --- Canon XA30
+        "148349",  // DSLR: Intermediate --- Canon EOS 90D DSLR
+        "148452",  // Video: Sony FS5 Camera --- Sony FS5
+        "148361",  // Camera Accessories: Lenses --- Rokinon EF 8mm f/3.5 Prime Fisheye Lens
+        "148360",  // Camera Accessories: Lenses --- Canon EF-S 60mm f/2.8 Prime Macro Lens
+        "148363",  // Camera Accessories: Lenses --- Tamron EF 70-300mm f/4-5.6 Zoom Lens
+        "148362",  // Camera Accessories: Lenses --- Lensbabies 2.0 Ef Special FX Lens
+        "148364",  // Camera Accessories: Lenses --- Rokinon Ef 35mm f/1.5 Prime Cine Lens
+        "148365",  // Camera Accessories: Lenses --- Rokinon Ef 24mm f/1.5 Prime Cine Lens
+        "148366",  // Camera Accessories: Lenses --- Rokinon Ef 50mm f/1.5 Prime Cine Lens
+        "148367",  // Camera Accessories: Lenses --- Rokinon Ef 85mm f/1.5 Prime Cine Lens
+        "148368",  // Camera Accessories: Lenses --- Sigma Ef 150-600mm f/5-6.3 DG OS HSM Lens
+        "148410",  // Camera Accessories: Follow Focus --- Tilta Follow Focus System
+        "148399",  // Camera Accessories: Tripods --- Small Gorillapod
+        "148401",  // Camera Accessories: Tripods --- Mini GorillaPod
+        "148407",  // Camera Accessories: Tripods --- Small Pistol-Grip Photo Tripod
+        "148408",  // Camera Accessories: Tripods --- Heavy Duty Fluid Head Tripod
+        "148398",  // Camera Accessories: Tripods --- Heavy Duty Fluid Head Tripod w/ Spreader
+        "148403",  // Camera Accessories: Tripods --- Medium Photo Tripod
+        "148393",  // Camera Accessories: Tripods --- Medium Pistol-Grip Photo Tripod
+        "148395",  // Camera Accessories: Tripods --- Medium Tripod Dolly
+        "148388",  // Camera Accessories: Tripods --- Medium Video/Photo Tripod
+        "148404",  // Camera Accessories: Tripods --- Small Tripod Dolly
+        "148420",  // Video: Atomos Monitor --- Atomos Shogun Inferno Recording Monitor
+        "148354",  // DSLR: Advanced --- Canon EOS 5D Mark IV DSLR
+        "148382",  // Lights: Advanced LED --- Aputure Light Storm (C120d II) LED Light Kit
+        "148405",  // Camera Accessories: Ronin --- Ronin RS2 Gimbal/Steadicam
+        "146930",  // Audio: Mixers --- Presonus AR12c Portable Mixer
+        "146927",  // Audio: Mixers --- Mackie Portable Mixer 
+        "136536"   // Test   
     ]; // list of all equipment IDs requiring authorization.
 
     // --------------------------------------STOP EDITING CODE HERE ---------------------------------------- //
    
    
     // Create auth banner template element that can be inserted
+    
     var authBanner = document.createElement("span");
     authBanner.classList.add("auth-banner");
-    // Banner Text
-    authBanner.innerHTML = "Auth Required "; // Intentional space at end
-    // Craete info icon to be inserted into banner (img)
+    // Add Clicklable Banner Text
+    var authBannerText = document.createElement("a");
+    authBannerText.classList.add("auth-banner-text");
+    authBannerText.href = "";
+    authBannerText.innerHTML = "Auth Required ";  // Intentional space at end
+    authBanner.appendChild(authBannerText);
+    // Create info icon to be inserted into banner (img)
     var infoIcon = document.createElement("img");
     infoIcon.classList.add("auth-info-icon");
     // Icon image URL (from LibApps Image Manager Library)
     infoIcon.src = "https://libapps.s3.amazonaws.com/customers/9396/images/icon_info.png";
+    // Wrap icon in anchor tag to make it clickable
+    var infoIconLink = document.createElement("a");
+    infoIconLink.href = "";
+    infoIconLink.id = "auth-info-icon-link";
+    infoIconLink.appendChild(infoIcon);
     // Insert info icon into banner
-    authBanner.insertAdjacentElement("beforeend", infoIcon);
+    authBanner.insertAdjacentElement("beforeend", infoIconLink);
+        
+
     
-    // Observe item cards for changes
+    // Observe page changes to update cards dynamically
     const targetNode = document;
     // create an observer instance to watch for changes
     const observer = new MutationObserver(() => {
-        // code to be executed when the page updates
+        // Code to be executed when the page updates
 
         // Get all item cards (class="col-item")
         let itemCards = document.getElementsByClassName("col-item");
@@ -55,8 +101,11 @@ if(/^https:\/\/jhu-dmc\.libcal\.com\/equipment/.test(window.location.href)) {
             if(!pageAuthItems[i].classList.contains("auth-item-card")) {
                 // Add border to card
                 pageAuthItems[i].classList.add("auth-item-card");
-                // Insert banner directly after the card's opening div tag
+                // Clone banner template
                 let authBannerClone = authBanner.cloneNode(true);
+                // Change banner link to item page
+                authBannerClone.getElementsByTagName("a")[0].href = pageAuthItems[i].getElementsByTagName("a")[0].href;
+                // Insert banner directly after the card's opening div tag
                 pageAuthItems[i].insertAdjacentElement("afterbegin", authBannerClone);
             };
         };
