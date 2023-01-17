@@ -24,3 +24,16 @@ img.auth-info-icon{
     height: 60%;
     padding-bottom: 2px;
 }
+a.auth-banner-text:link{
+    color: #ffffff;
+}
+a.auth-banner-text:visited{
+    color: #ffffff;
+}
+a.auth-banner-text:hover{
+    color: #ffafff;
+    text-decoration: none;
+}
+a.auth-banner-text:active{
+    color: #f267ff;
+}
