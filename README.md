@@ -1,22 +1,25 @@
 # LibCal-Website-Customization
 
-This repository stores all the code for customizing the patron-facing LibCal interface for DMC BookIt!
+This repository stores all the code for customizing the patron-facing LibCal interface for DMC BookIt. Below lists the current customizations and outlines how they are installed.
 
 ## Customization List
 
 ### Check Membership Button
 
 ![Check membership button screenshot](images/readme_images/membership-button.png)
+
 A button that links to the Power Apps membership status checker devloped by JHU IT. This is inserted on the homepage and opens the checker in a new tab.
 
 ### Authed Item Borders
 
 ![Authed Item Border screenshot](images/readme_images/authed-item-borders.png)
+
 Draws a purple border around items requring authorization. Includes a banner with an info icon that simply redirects to the item page.
 
 ### Authed Item Disclaimer
 
 ![Authed Item Disclaimer screenshot](images/readme_images/authed-item-disclaimer.png)
+
 Inserts a text disclaimer about what "authorization" means. Includes a button to check authorization status. The button has style dependencies with the homepage membership button.
 
 ### Category Grids
