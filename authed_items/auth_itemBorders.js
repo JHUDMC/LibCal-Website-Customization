@@ -57,7 +57,7 @@ Date Created: 01/11/2023
 
 // Check for authed items on equipment pages only
 // (to preserve resources on other pages)
-if(/^https:\/\/jhu-dmc\.libcal\.com\/equipment\?/.test(window.location.href) ||  /^https:\/\/jhu-dmc\.libcal\.com\/reserve/.test(window.location.href)) {
+if(/^https:\/\/bookit\.dmc\.jhu\.edu\/equipment\?/.test(window.location.href) ||  /^https:\/\/bookit\.dmc\.jhu\.edu\/reserve/.test(window.location.href)) {
     // Create auth banner template element that can be inserted
     
     var authBanner = document.createElement("span");

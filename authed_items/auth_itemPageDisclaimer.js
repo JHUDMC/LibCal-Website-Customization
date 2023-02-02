@@ -7,7 +7,7 @@ Date Created: 01/17/2023
 
 // Check for authed items on equipment pages only
 // (wrapped like this to preserve resources on other pages)
-if(/^https:\/\/jhu-dmc\.libcal\.com\/equipment\/item\//.test(window.location.href)) {
+if(/^https:\/\/bookit\.dmc\.jhu\.edu\/equipment\/item\//.test(window.location.href)) {
     // get the equipment ID from the end of the URL
     var equipmentID = window.location.href.split("/").pop();
     // check if the equipment ID is in the masterAuthList
