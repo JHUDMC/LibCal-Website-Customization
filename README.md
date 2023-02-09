@@ -1,6 +1,6 @@
 # LibCal-Website-Customization
 
-This repository stores all the code for customizing the patron-facing LibCal interface for DMC BookIt. Below lists the current customizations and outlines how they are installed.
+This repository stores all the code for customizing the patron-facing LibCal interface for DMC BookIt. Below lists the current customizations and outlines how they are installed. See
 
 ## Customization List
 
@@ -34,40 +34,78 @@ Changes text of the DMC staff login link in the footer of all public pages. "Log
 
 Adds a grid of the available categories and subcategories. Each category has a collapsible dropdown. Dynamically resizes to accomodate mobile UI.
 
-## How to "Install" Customizations
+## Customization Table
+
+| Customization Name      | CSS Injection? | JS Injection? | Homepage Editor HTML? |  |
+| ----------------------- | :------------: | :-----------: | :-------------------: | - |
+| Check Membership Button |  &nbsp;x[^1]  |              |           x           |  |
+| Authed Item Borders     |       x       |       x       |                      |  |
+| Authed Item Disclaimer  |       x       |       x       |                      |  |
+| Staff Login Text Change |                |       x       |                      |  |
+| Category Grids          |       x       |       x       |           x           |  |
+
+## How to Implement New Customizations
+
+### Coding Rules
+
+Always follow these rules when developing any website customizations involving code:
+
+1. Obtain ProStaff approval before making any public changes!
+2. Save all of your code to this repository in an appropriate folder.
+3. Use code comments diligently!
+4. Add an author & description comment at the top, e.g.:
+   ```
+   /*
+   Description: Adds a border around items requiring authorization
+   Author: Dua Lipa (hotgurlsheet@gmail.com)
+   */
+   ```
+5. Take a screenshot of what the changes look like, and save to `images/readme_images`
+6. Add the image and a short description to the (Customization List)[#Customization-List] section of this readme file.
+7. Add an entry in the (Customization Table)[#Customization-Table] of this readme file.
+8. Follow the instructions below for implementation.
 
 ### Adding Homepage HTML elements
 
-This includes the *Check Membership Button* and *Category Grids*. To add custom HTML:
+Most parts of the HTML for the public LibCal homepage can easily be edited using the native Rich-Text text editor native to the admin dashboard. To add custom HTML to the homepage:
 
-1. Go to the staff dashboard.
-2. Clock the ribbon tab `Admin` > `Look & Feel`.
+1. Go to the [staff dashboard](https://jhu-dmc.libapps.com/libapps/login.php?site_id=23671&target=).
+2. Click the ribbon tab `Admin` > `Look & Feel`.
 3. Click the tab `Homepage Editor`.
 4. Click edit icon (pencil) on specific block.
-5. In the Rich Text editor, click `Source` to reveal the HTML.
+5. In the Rich-Text editor, click `Source` to reveal the HTML.
 6. Paste in the HTML.
+7. Click `Source` again to hide the HTML and preview the changes.
+8. Click the `Save` button.
+9. Test your code on the [public website](https://bookit.dmc.jhu.edu/)! Any changes are public to patrons immediately!
 
 ### Injecting Custom JS & CSS
 
-\*All\* customizations have injected CSS. *Authed Item Borders*, *Authed Item Disclaimers*, and *Category Grids* all function using injected JavaScript.
+Custom CSS and JavaScript can be used in order to:
+
+* Change the public LibCal website on any page, rather than just the homepage
+* Edit the homepage with more advanced featutes than HTML alone can allow
+* Keep the homepage HTML free from lengthy `style="..."` attributes within tags
+
+Custom CSS and JS that are injected into the head of every public LibCal page. LibCal is nice enough to natiely support this feature in the admin panel. This allows us to change pretty much anything we'd like. *Don't let your dreams be memes*...
 
 To inject custom code:
 
-1. Go to the staff dashboard.
-2. Clock the ribbon tab `Admin` > `Look & Feel`.
-3. Scroll down to `Code Customizations`.
-4. Follow instructions below for JS or CSS.
+1. First test your code locally! Any changes here are public to all patrons!!!
+2. Go to the staff dashboard.
+3. Clock the ribbon tab `Admin` > `Look & Feel`.
+4. Scroll down to `Code Customizations`.
+5. Paste the code in the custom code text box.
+6. Wrap the code in the appropriate tags:
 
-For custom JS:
+   **Note**: Each customization should be wrapped in ***separate tags!*** This makes it easier to understand what is what.
 
-1. Wrap the script in `<script>` and `</script>` tags.
-2. Paste the code in the custom code text box.
-3. Click `save`.
+   * JS:  `<script>`  and  `</script>`
+   * CSS:  `<style>` and `</style>`
+7. Click the `save` button and ensure you see the `Sucess` message.
 
-For custom CSS:
+   * If you see `Error` you likely didn't change anything.
+   * If you did indeed change something and still see the `Error` message, add a space somewhere random that won't break the code.
+8. Test your code!!!!! Any changes are public to patrons immediately!
 
-1. Wrap the script in `<style>` and `</style>` tags.
-2. Paste the code in the custom code text box.
-3. Click `save`.
-
-**Note**: Each script and style should be wrapped in separate `<script>` and `<stlye>` tags. This makes it easier to see the start and end of different customizations.
+[^1]: Relies on the CSS of *Authed Item Disclaimer*
