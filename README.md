@@ -44,6 +44,8 @@ Adds a grid of the available categories and subcategories. Each category has a c
 | Staff Login Text Change |                |       x       |                      |  |
 | Category Grids          |       x       |       x       |           x           |  |
 
+[^1]: Relies on the CSS of *Authed Item Disclaimer*
+
 ## How to Implement New Customizations
 
 ### Coding Rules
@@ -107,5 +109,3 @@ To inject custom code:
    * If you see `Error` you likely didn't change anything.
    * If you did indeed change something and still see the `Error` message, add a space somewhere random that won't break the code.
 8. Test your code!!!!! Any changes are public to patrons immediately!
-
-[^1]: Relies on the CSS of *Authed Item Disclaimer*
