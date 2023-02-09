@@ -26,7 +26,7 @@ Inserts a text disclaimer about what "authorization" means. Includes a button to
 
 ![Staff Login Text Change](images/readme_images/dmc-staff-login.png)
 
-Changes text of the DMC staff login link in the footer. "Login to LibApps" is changed to "DMC Staff Login".
+Changes text of the DMC staff login link in the footer of all public pages. "Login to LibApps" is changed to "DMC Staff Login".
 
 ### Category Grids
 
