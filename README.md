@@ -1,8 +1,10 @@
 # LibCal-Website-Customization
 
-This repository stores all the code for customizing the patron-facing LibCal interface for DMC BookIt. Below lists the current customizations and outlines how they are installed. See
+This repository stores all the code for customizing the patron-facing LibCal interface for DMC BookIt. This `README.md` lists all of the current customizations, and outlines how to develop and install them.
 
-## Customization List
+# Current Customizations
+
+## List of Customizations
 
 ### Check Membership Button
 
@@ -34,21 +36,19 @@ Changes text of the DMC staff login link in the footer of all public pages. "Log
 
 Adds a grid of the available categories and subcategories. Each category has a collapsible dropdown. Dynamically resizes to accomodate mobile UI.
 
-## Customization Table
+## Table of Customizations
 
-| Customization Name      | CSS Injection? | JS Injection? | Homepage Editor HTML? |
-| ----------------------- | :------------: | :-----------: | :-------------------: |
+| Customization           | CSS Injection? | JS Injection? | Homepage Editor HTML? |
+| :---------------------- | :------------: | :-----------: | :-------------------: |
 | Check Membership Button |  &nbsp;x[^1]  |              |           x           |
 | Authed Item Borders     |       x       |       x       |                      |
 | Authed Item Disclaimer  |       x       |       x       |                      |
 | Staff Login Text Change |                |       x       |                      |
 | Category Grids          |       x       |       x       |           x           |
 
-[^1]: Relies on the CSS of *Authed Item Disclaimer*
-    
-## How to Implement New Customizations
+# Custom Code Development
 
-### Coding Rules
+## Coding Rules
 
 Always follow these rules when developing any website customizations involving code:
 
@@ -63,11 +63,11 @@ Always follow these rules when developing any website customizations involving c
    */
    ```
 5. Take a screenshot of what the changes look like, and save to `images/readme_images`
-6. Add the image and a short description to the (Customization List)[#Customization-List] section of this readme file.
-7. Add an entry in the (Customization Table)[#Customization-Table] of this readme file.
+6. Add the image and a short description to the [Customization List](#List-of-Customizations "jump to") section of this readme file.
+7. Add an entry in the [Customization Table](#Table-of-Customizations "jump to") of this readme file.
 8. Follow the instructions below for implementation.
 
-### Adding Homepage HTML elements
+## Adding Homepage HTML elements
 
 Most parts of the HTML for the public LibCal homepage can easily be edited using the native Rich-Text text editor native to the admin dashboard. To add custom HTML to the homepage:
 
@@ -81,7 +81,7 @@ Most parts of the HTML for the public LibCal homepage can easily be edited using
 8. Click the `Save` button.
 9. Test your code on the [public website](https://bookit.dmc.jhu.edu/)! Any changes are public to patrons immediately!
 
-### Injecting Custom JS & CSS
+## Injecting Custom JS & CSS
 
 Custom CSS and JavaScript can be used in order to:
 
@@ -109,3 +109,5 @@ To inject custom code:
    * If you see `Error` you likely didn't change anything.
    * If you did indeed change something and still see the `Error` message, add a space somewhere random that won't break the code.
 8. Test your code!!!!! Any changes are public to patrons immediately!
+
+[^1]: Relies on the CSS of *Authed Item Disclaimer*
