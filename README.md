@@ -96,7 +96,7 @@ To inject custom code:
 
 1. Check that you followed ALL of the above [rules](#coding-rules "Jump to rules")!
 2. Go to the [staff dashboard](https://jhu-dmc.libapps.com/libapps/login.php?site_id=23671&target= "Go to dashboard").
-3. Clock the ribbon tab `Admin` > `Look & Feel`.
+3. Click the ribbon tab `Admin` > `Look & Feel`.
 4. Scroll down to `Code Customizations`.
 5. Paste the code in the custom code text box.
 6. Wrap the code in the appropriate tags:
