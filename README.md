@@ -36,16 +36,16 @@ Adds a grid of the available categories and subcategories. Each category has a c
 
 ## Customization Table
 
-| Customization Name      | CSS Injection? | JS Injection? | Homepage Editor HTML? |  |
-| ----------------------- | :------------: | :-----------: | :-------------------: | - |
-| Check Membership Button |  &nbsp;x[^1]  |              |           x           |  |
-| Authed Item Borders     |       x       |       x       |                      |  |
-| Authed Item Disclaimer  |       x       |       x       |                      |  |
-| Staff Login Text Change |                |       x       |                      |  |
-| Category Grids          |       x       |       x       |           x           |  |
+| Customization Name      | CSS Injection? | JS Injection? | Homepage Editor HTML? |
+| ----------------------- | :------------: | :-----------: | :-------------------: |
+| Check Membership Button |  &nbsp;x[^1]  |              |           x           |
+| Authed Item Borders     |       x       |       x       |                      |
+| Authed Item Disclaimer  |       x       |       x       |                      |
+| Staff Login Text Change |                |       x       |                      |
+| Category Grids          |       x       |       x       |           x           |
 
 [^1]: Relies on the CSS of *Authed Item Disclaimer*
-
+    
 ## How to Implement New Customizations
 
 ### Coding Rules
