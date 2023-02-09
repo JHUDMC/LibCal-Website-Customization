@@ -10,13 +10,13 @@ This repository stores all of the code for customizing the patron-facing LibCal 
 
 ![Check membership button screenshot](images/readme_images/membership-button.png)
 
-A button that links to the Power Apps membership status checker that was devloped by JHU IT. This is inserted on the homepage and opens the checker in a new tab.
+A button that links to the Power Apps membership status checker that was developed by JHU IT. This is inserted on the homepage and opens the checker in a new tab.
 
 ### Authed Item Borders
 
 ![Authed Item Border screenshot](images/readme_images/authed-item-borders.png)
 
-Draws a purple border around items requring authorization. Includes a banner with an info icon that simply redirects to the item page to display the disclaimer.
+Draws a purple border around items requiring authorization. Includes a banner with an info icon that simply redirects to the item page to display the disclaimer.
 
 ### Authed Item Disclaimer
 
@@ -32,9 +32,9 @@ Changes text of the DMC staff login link in the footer of all public pages. "Log
 
 ### Category Grids
 
-> ! Currently in devlopment !
+> ! Currently in development !
 
-Adds a grid of the available equipment categories and subcategories. Each category has a collapsible dropdown. Dynamically resizes to accomodate mobile UI.
+Adds a grid of the available equipment categories and subcategories. Each category has a collapsible dropdown. Dynamically resizes to accommodate mobile UI.
 
 ## Table of Customizations
 
@@ -62,7 +62,7 @@ Always follow these rules when developing any website customizations involving c
    // Description: Adds a border around items requiring authorization
    // Author: Dua Lipa (hotgurlsheet@gmail.com)
    ```
-5. Take a screenshot of what the changes look like, and save to `images/readme_images/`
+5. Take a screenshot of what the changes look like, and save it to this repo in  `/images/readme_images/`
 6. Add the image and a short description to the [Customization List](#List-of-Customizations "Jump to list") section of this readme file.
 7. Add a row in the [Customization Table](#Table-of-Customizations "Jump to table") of this readme file.
 8. Follow the instructions below for implementation.
@@ -87,10 +87,10 @@ Most parts of the HTML for the public LibCal homepage can easily be edited using
 Custom CSS and JavaScript can be used in order to:
 
 * Change the public LibCal website on any page, rather than just the homepage
-* Edit the homepage with more advanced featutes than HTML alone can allow
+* Edit the homepage with more advanced features than HTML alone can allow
 * Keep the HTML of the homepage free from lengthy `style="..."` attributes
 
-Custom CSS and JS are injected into the head of *every* public LibCal page. LibCal is nice enough to natiely support this feature in the admin panel. This allows us to change pretty much anything we'd like. *Don't let your dreams be memes*...
+Custom CSS and JS are injected into the head of *every* public LibCal page. LibCal is nice enough to natively support this feature in the admin panel. This allows us to change pretty much anything we'd like. *Don't let your dreams be memes*...
 
 To inject custom code:
 
@@ -105,10 +105,21 @@ To inject custom code:
 
    * JS:  `<script>`  and  `</script>`
    * CSS:  `<style>` and `</style>`
-7. Click the `save` button and ensure you see the `Sucess` message.
+7. Click the `save` button and ensure you see the `Success` message.
 
    * If you see `Error` you likely didn't change anything.
    * If you did indeed change something and still see the `Error` message, add a space somewhere random that won't break the code.
 8. Test your code on the [public website](https://bookit.dmc.jhu.edu/ "Go to public website")!!! All changes are public to patrons immediately!
+
+## Code with Image Dependencies
+
+If developing any custom code that adds images to the page, please follow the guidelines below:
+
+1. Create an meaningful filename, as this is retained in the image URL.
+2. Upload them to the [LibApps Image Manager](https://jhu-dmc.libapps.com/libapps/image_manager "Go to LibApps") to generate a static URL.
+   1. Click the `Shared Library` button.
+   2. Click the `Custom Code` folder.
+   3. Click the chain icon under the uploaded image to obtain the URL.
+3. For posterity, upload the images to this repo's `/images` folder.
 
 [^1]: Relies on the CSS of *Authed Item Disclaimer*
