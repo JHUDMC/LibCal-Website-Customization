@@ -100,8 +100,14 @@ if(/^https:\/\/bookit\.dmc\.jhu\.edu\/equipment\?/.test(window.location.href) ||
                 pageAuthItems[i].classList.add("auth-item-card");
                 // Clone banner template
                 let authBannerClone = authBanner.cloneNode(true);
-                // Change banner link to item page
-                authBannerClone.getElementsByTagName("a")[0].href = pageAuthItems[i].getElementsByTagName("a")[0].href;
+                // Get item page link
+                let itemPageHref = pageAuthItems[i].getElementsByTagName("a")[0].href;
+                // Get banner link and info icon a tags
+                let itemPageLinks = authBannerClone.getElementsByTagName("a")
+                // Change item page links
+                for(let j = 0; j < itemPageLinks.length; j++) {
+                    itemPageLinks[j].href = itemPageHref;
+                };
                 // Insert banner directly after the card's opening div tag
                 pageAuthItems[i].insertAdjacentElement("afterbegin", authBannerClone);
             };
