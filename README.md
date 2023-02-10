@@ -96,19 +96,16 @@ To inject custom code:
 
 1. Check that you followed ALL of the above [rules](#coding-rules "Jump to rules")!
 2. Go to the [staff dashboard](https://jhu-dmc.libapps.com/libapps/login.php?site_id=23671&target= "Go to dashboard").
-3. Clock the ribbon tab `Admin` > `Look & Feel`.
+3. Click the ribbon tab `Admin` > `Look & Feel`.
 4. Scroll down to `Code Customizations`.
 5. Paste the code in the custom code text box.
 6. Wrap the code in the appropriate tags:
-
-   **Note**: Each customization should be wrapped in ***separate tags!*** This makes it easier to understand what is what.
-
-   * JS:  `<script>`  and  `</script>`
-   * CSS:  `<style>` and `</style>`
+   - **Note**: Each customization should be wrapped in ***separate tags!*** This makes it easier to understand what is what.
+   - JS:  `<script>`  and  `</script>`
+   - CSS:  `<style>` and `</style>`
 7. Click the `save` button and ensure you see the `Success` message.
-
-   * If you see `Error` you likely didn't change anything.
-   * If you did indeed change something and still see the `Error` message, add a space somewhere random that won't break the code.
+   - If you see `Error` you likely didn't change anything.
+   - If you did indeed change something and still see the `Error` message, add a space somewhere random that won't break the code.
 8. Test your code on the [public website](https://bookit.dmc.jhu.edu/ "Go to public website")!!! All changes are public to patrons immediately!
 
 ## Code with Image Dependencies
