@@ -32,7 +32,7 @@ Changes text of the DMC staff login link in the footer of all public pages. "Log
 
 ### Category Grids
 
-> ! Currently in development !
+![Category Grids](images/readme_images/category-grids.png)
 
 Adds a grid of the available equipment categories and subcategories. Each category has a collapsible dropdown. Dynamically resizes to accommodate mobile UI.
 
