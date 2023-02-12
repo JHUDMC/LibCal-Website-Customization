@@ -1,4 +1,4 @@
-# Code to generate HTML cards for the category grid
+# Python Script to generate HTML cards for the category grid
 import re
 
 catTemplate = """
@@ -11,7 +11,7 @@ catTemplate = """
                 {CAT_NAME}
             </span>
         </div>
-        <div class="grid-container">
+        <div class="grid-container" style="display: none;">
 {SUBCATS_HTML}
         
         </div>
@@ -20,9 +20,11 @@ catTemplate = """
 subCatTempalte = """
             <a href="https://bookit.dmc.jhu.edu/reserve/{FRIENDLY_URL}">
                 <div class="grid-item">
-                    <img class="grid-item-image" src="https://libapps.s3.amazonaws.com/customers/9396/images/{IMAGE_FILENAME}">
                     <div class="grid-item-title">
                         {SUBCAT_NAME}
+                    </div>
+                    <div class="grid-item-image">
+                        <img class="grid-item-image" src="https://libapps.s3.amazonaws.com/customers/9396/images/{IMAGE_FILENAME}">
                     </div>
                 </div>
             </a>"""
@@ -56,7 +58,7 @@ rawCatList = [
     "Other: Tote Bags & Poster Tubes",
     "Photo/Video: Cables & Adapters",
     "Photo/Video: DSLR Camera Kits",
-    "Photo/Video: GoPro Kits",
+    "Photo/Video: GoPros and Other Cameras",
     "Photo/Video: Lenses",
     "Photo/Video: Lighting & Grip",
     "Photo/Video: Tripods & Supports",
@@ -93,7 +95,7 @@ rawFriendlyURLs = [
     "Bags",
     "PhotoVideoCables",
     "DSLR",
-    "GoPro",
+    "OtherCameras",
     "Lenses",
     "Lights",
     "Tripods",
