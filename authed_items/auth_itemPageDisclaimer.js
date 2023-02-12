@@ -18,7 +18,7 @@ if(/^https:\/\/bookit\.dmc\.jhu\.edu\/equipment\/item\//.test(window.location.hr
         // Disclaimer text
         var disclaimerText = "<br>This item requires a one-time authorization before you are able to make a reservation. ";
         disclaimerText += "To get authorized, come to the DMC anytime we're open and ask to get trained at the front desk. ";
-        disclaimerText += "If you are unsure of your authorization status, click the above below to view a list of your trainings alongside your membership.<br><br><br>";
+        disclaimerText += "If you are unsure of your authorization status, click the button to view a list of your trainings alongside your membership.<br><br><br>";
         authDisclaimer.innerHTML = disclaimerText;
         // Disclaimer button to check authorization status
         var authButton = document.createElement("button");
