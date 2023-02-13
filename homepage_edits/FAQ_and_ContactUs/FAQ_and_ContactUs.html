@@ -1,0 +1,75 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="FAQ_and_ContactUs.css">
+<script src="FAQ_and_ContactUs.js"></script>
+<style>
+    /** mimic LibCal font **/
+    body {
+        font: 14px Arial, Helvetica, Verdana;
+    }
+</style>
+</head>
+<body>
+<div id="FAQ_and_ContactUs">
+    <!-- sorry for the mix of _ and - in the naming, it was a long day 
+        feel free to change if you want... -->
+    <div class="FAQ_and_ContactUs_bars" id="FAQ-bar" onclick="hideShow_FAQ()">
+        <span class="FAQ_and_ContactUs_hideShow" id="FAQ_hideShow">▲</span>
+        <span class="titlebar-title-FAQ" id="titlebar-title-FAQ-long"> Frequently Asked Questions</span>
+        <span class="titlebar-title-FAQ"  id="titlebar-title-FAQ-short"> FAQ</span>
+    </div>
+    <div class="FAQ_and_ContactUs_bars" id="ContactUs-bar" onclick="hideShow_ContactUs()">
+        <span class="FAQ_and_ContactUs_hideShow" id="ContactUs_hideShow">▲</span>
+        <span class="titlebar-title-FAQ"> Contact Us</span>
+    </div>
+    <div class="FAQ_and_ContactUs_content" id="FAQ-content" style="display: none;">
+        
+        <div class="FAQ_question">
+            <!--    &#9650; === ▲    -->
+            <div class="FAQ_question-bar" onclick="hideShow_FAQ_answer(event)">
+                <span class="FAQ_Question_hideShow" id="FAQ_hideShow">&#9650;</span>
+                What is the answer to question 1?
+            </div>
+            <div class="FAQ_answer" style="display: none;">
+                This is my answer to question 1.
+            </div>
+        </div>
+        <div class="FAQ_question">
+            <div class="FAQ_question-bar" onclick="hideShow_FAQ_answer(event)">
+                <span class="FAQ_Question_hideShow" id="FAQ_hideShow">&#9650;</span>
+                What is the answer to question 2?
+            </div>
+            <div class="FAQ_answer" style="display: none;">
+                This is my answer to question 2.
+            </div>
+        </div>
+        <div class="FAQ_question">
+            <div class="FAQ_question-bar" onclick="hideShow_FAQ_answer(event)">
+                <span class="FAQ_Question_hideShow" id="FAQ_hideShow">&#9650;</span>
+                What is the answer to question 3?
+            </div>
+            <div class="FAQ_answer" style="display: none;">
+                This is my answer to question 3.
+            </div>
+        </div>
+        <div class="FAQ_question">
+            <div class="FAQ_question-bar" onclick="hideShow_FAQ_answer(event)">
+                <span class="FAQ_Question_hideShow" id="FAQ_hideShow">&#9650;</span>
+                What is the answer to question 4?
+            </div>
+            <div class="FAQ_answer" style="display: none;">
+                This is my answer to question 4.
+            </div>
+        </div>
+    </div>
+    <div class="FAQ_and_ContactUs_content" id="ContactUs-content" style="display: none;">
+        <!--  ANTON, CODE HERE :)  -->
+        Call us
+        <br>
+        email
+        <br>
+        discord
+    </div>
+</div>
+</body>
+</html>
