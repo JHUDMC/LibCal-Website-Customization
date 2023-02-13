@@ -1,5 +1,5 @@
 /* Stylesheet for the homepage grid items */
-a:link, a:visited, a:hover, a:active {
+a.homepage-grid-link:link, a.homepage-grid-link:visited, a.homepage-grid-link:hover, a.homepage-grid-link:active {
     text-decoration: none;
     color: #000;
 }
