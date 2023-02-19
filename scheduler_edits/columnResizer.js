@@ -46,17 +46,20 @@ var addColumnResizerDynamic = function() {
 
 // Get the current URL
 var url = window.location.href;
-// Check if the URL is in list of URLs known to have the scheduler
+// if on mobile and if on a specific equipment or space page
 if (
+    window.innerWidth > 768 && 
+    (
+        /https:\/\/bookit\.dmc\.jhu\.edu\/equipment\/item\/.?/.test(url) ||
+        /https:\/\/bookit\.dmc\.jhu\.edu\/space\/.?/.test(url)
+    )
+){
+    addColumnResizerDynamic();
+// else if on equipment of space category page
+} else if (
     /https:\/\/bookit\.dmc\.jhu\.edu\/reserve.?/.test(url) ||
     /https:\/\/bookit\.dmc\.jhu\.edu\/spaces.?/.test(url) ||
-    /https:\/\/bookit\.dmc\.jhu\.edu\/space\/.?/.test(url)
+    /https:\/\/bookit\.dmc\.jhu\.edu\/equipment\/.?/.test(url)
 ) {
     addColumnResizerDynamic();
-};
-
-// Curently broken for mobile on equipment page,
-// so only add for desktop if on equipment page
-if (window.innerWidth > 768 && /https:\/\/bookit\.dmc\.jhu\.edu\/equipment\/item\/.?/.test(url)){
-    addColumnResizerDynamic();
-};
+} ;
