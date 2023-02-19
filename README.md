@@ -36,6 +36,13 @@ Changes text of the DMC staff login link in the footer of all public pages. "Log
 
 Adds a grid of the available equipment categories and subcategories. Each category has a collapsible dropdown. Dynamically resizes to accommodate mobile UI.
 
+### Column Resizer
+
+![Column Resizer](images/readme_images/column-resizer.png)
+
+Edits the unnoticeable column resizer in the scheduler. Makes the bar wider & blue, and adds a handle. On mobile, it doesn't have a handle on item pages (due to bugs) so it makes the bar slightly wider.
+
+
 ## Table of Customizations
 
 Below is a table describing the types of code each customization utilizes.
@@ -47,6 +54,7 @@ Below is a table describing the types of code each customization utilizes.
 | Authed Item Disclaimer  |       x       |       x       |                      |
 | Staff Login Text Change |                |       x       |                      |
 | Category Grids          |       x       |       x       |           x           |
+| Column Resizer          |       x       |       x       |                      |
 
 # Custom Code Development
 
