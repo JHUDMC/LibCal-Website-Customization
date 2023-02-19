@@ -84,8 +84,6 @@ if(/^https:\/\/bookit\.dmc\.jhu\.edu\/equipment\?/.test(window.location.href) ||
 
     
     // Observe page changes to update cards dynamically
-    const targetNode = document;
-    // create an observer instance to watch for changes
     const observer = new MutationObserver(() => {
         // Code to be executed when the page updates
 
@@ -128,10 +126,8 @@ if(/^https:\/\/bookit\.dmc\.jhu\.edu\/equipment\?/.test(window.location.href) ||
             return pageAuthList;
         };
     });
-
-    // configuration of the observer
-    const config = { childList: true, subtree: true };
+    
     // observe changes!
-    observer.observe(targetNode, config);
+    observer.observe(document, { childList: true, subtree: true };);
 
 };
