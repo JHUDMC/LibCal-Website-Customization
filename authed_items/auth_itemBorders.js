@@ -128,6 +128,6 @@ if(/^https:\/\/bookit\.dmc\.jhu\.edu\/equipment\?/.test(window.location.href) ||
     });
     
     // observe changes!
-    observer.observe(document, { childList: true, subtree: true };);
+    observer.observe(document, { childList: true, subtree: true });
 
 };
