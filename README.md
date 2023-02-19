@@ -36,25 +36,31 @@ Changes text of the DMC staff login link in the footer of all public pages. "Log
 
 Adds a grid of the available equipment categories and subcategories. Each category has a collapsible dropdown. Dynamically resizes to accommodate mobile UI.
 
-### Column Resizer
+### Scheduler Column Resizer
 
-![Column Resizer](images/readme_images/column-resizer.png)
+![Scheduler Column Resizer](images\readme_images\scheduler-column-resizer.png)
 
 Edits the unnoticeable column resizer in the scheduler. Makes the bar wider & blue, and adds a handle. On mobile, it doesn't have a handle on item pages (due to bugs) so it makes the bar slightly wider.
 
+### Autocollapse Other Items
+
+![Autocollapse Other Items](images\readme_images\autocollapse-other-items.png)
+
+On equipment page load, clicks the "Other items in this category" collpase button.
 
 ## Table of Customizations
 
 Below is a table describing the types of code each customization utilizes.
 
-| Customization           | CSS Injection? | JS Injection? | Homepage Editor HTML? |
-| :---------------------- | :------------: | :-----------: | :-------------------: |
-| Check Membership Button |  &nbsp;x[^1]  |              |           x           |
-| Authed Item Borders     |       x       |       x       |                      |
-| Authed Item Disclaimer  |       x       |       x       |                      |
-| Staff Login Text Change |                |       x       |                      |
-| Category Grids          |       x       |       x       |           x           |
-| Column Resizer          |       x       |       x       |                      |
+| Customization            | CSS Injection? | JS Injection? | Homepage Editor HTML? |
+| :----------------------- | :------------: | :-----------: | :-------------------: |
+| Check Membership Button  |  &nbsp;x[^1]  |              |           x           |
+| Authed Item Borders      |       x       |       x       |                      |
+| Authed Item Disclaimer   |       x       |       x       |                      |
+| Staff Login Text Change  |                |       x       |                      |
+| Category Grids           |       x       |       x       |           x           |
+| Column Resizer           |       x       |       x       |                      |
+| Autocollapse Other Items |                |       x       |                      |
 
 # Custom Code Development
 
