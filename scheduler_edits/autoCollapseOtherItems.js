@@ -43,4 +43,3 @@ if (/https:\/\/bookit\.dmc\.jhu\.edu\/equipment\/item\/.?/.test(window.location.
     // Wait for scheduler to load before calling collapseOtherItems()
     collapseOtherItemsDynamic();
 };
-
