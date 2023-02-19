@@ -1,0 +1,35 @@
+/* Restylize the dividers */
+.fc .fc-resource-timeline-divider {
+    width: 3px;
+    background-color: #68aee0;
+}
+
+/* Stylize the handle */
+.column-resizer-handle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #68aee0;
+    color: white;
+    border-radius: 10px;
+    margin-left: -8.5px;
+    margin-top: -10px;
+    text-align: center;
+    display: inline-block;
+    z-index: 99;
+    cursor: grab;
+}
+
+.column-resizer-handle:active {
+    cursor: grabbing;
+}
+
+/* slight thicker on mobile */
+@media (max-width: 768px) {
+    .fc .fc-resource-timeline-divider {
+        width: 6px;
+    }
+    .column-resizer-handle {
+        margin-left: -7.5px;
+    }
+}
