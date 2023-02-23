@@ -38,19 +38,19 @@ Adds a grid of the available equipment categories and subcategories. Each catego
 
 ### Scheduler Column Resizer
 
-![Scheduler Column Resizer](images\readme_images\scheduler-column-resizer.png)
+![Scheduler Column Resizer](images/readme_images/scheduler-column-resizer.png)
 
 Edits the unnoticeable column resizer in the scheduler. Makes the bar wider & blue, and adds a handle. On mobile, it doesn't have a handle on item pages (due to bugs) so it makes the bar slightly wider.
 
 ### Autocollapse Other Items
 
-![Autocollapse Other Items](images\readme_images\autocollapse-other-items.png)
+![Autocollapse Other Items](images/readme_images/autocollapse-other-items.png)
 
 On equipment page load, clicks the "Other items in this category" collpase button.
 
 ### Button Maker Templates Button Text
 
-![Button Maker Templates Button Text](images\readme_images\buttonMakerTemplatesButton.png)
+![Button Maker Templates Button Text](images/readme_images/buttonMakerTemplatesButton.png)
 
 Replaces the "User Manual" button text with "Download Templates" for the three button makers.
 
