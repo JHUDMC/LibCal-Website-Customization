@@ -48,19 +48,26 @@ Edits the unnoticeable column resizer in the scheduler. Makes the bar wider & bl
 
 On equipment page load, clicks the "Other items in this category" collpase button.
 
+### Button Maker Templates Button Text
+
+![Button Maker Templates Button Text](images\readme_images\buttonMakerTemplatesButton.png)
+
+Replaces the "User Manual" button text with "Download Templates" for the three button makers.
+
 ## Table of Customizations
 
 Below is a table describing the types of code each customization utilizes.
 
-| Customization            | CSS Injection? | JS Injection? | Homepage Editor HTML? |
-| :----------------------- | :------------: | :-----------: | :-------------------: |
-| Check Membership Button  |  &nbsp;x[^1]  |              |           x           |
-| Authed Item Borders      |       x       |       x       |                      |
-| Authed Item Disclaimer   |       x       |       x       |                      |
-| Staff Login Text Change  |                |       x       |                      |
-| Category Grids           |       x       |       x       |           x           |
-| Column Resizer           |       x       |       x       |                      |
-| Autocollapse Other Items |                |       x       |                      |
+| Customization                 | CSS Injection? | JS Injection? | Homepage Editor HTML? |
+| :---------------------------- | :------------: | :-----------: | :-------------------: |
+| Check Membership Button       |  &nbsp;x[^1]  |              |           x           |
+| Authed Item Borders           |       x       |       x       |                      |
+| Authed Item Disclaimer        |       x       |       x       |                      |
+| Staff Login Text Change       |                |       x       |                      |
+| Category Grids                |       x       |       x       |           x           |
+| Column Resizer                |       x       |       x       |                      |
+| Autocollapse Other Items      |                |       x       |                      |
+| Button Maker Templates Button |                |       x       |                      |
 
 # Custom Code Development
 
