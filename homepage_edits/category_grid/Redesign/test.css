@@ -1,0 +1,143 @@
+/* Solely for mimicking the margins of LibCal */
+#libcal-container {
+    margin: auto;
+}
+@media (min-width: 1200px) {
+    #libcal-container {
+        width: 1170px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    #libcal-container {
+        width: 970px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    #libcal-container {
+        width: 750px;
+    }
+}
+
+/* Real CSS here */
+* {
+    box-sizing: border-box;
+}
+#two-main-butts-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+.two-main-butts {
+    flex-basis: 50%;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+#equip-butt {
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #ef4a81;
+    color: rgb(255, 255, 255);
+}
+#inlab-butt {
+    margin-right: 20px;
+    background-color: #2062ae;
+    color: rgb(255, 255, 255);
+}
+.two-main-butts img {
+    margin: 20px;
+    height: 100px;
+}
+.two-main-butts .butt-label {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#equip-cats-cont{
+    margin: 20px;
+}
+#inlab-cats-cont{
+    margin: 20px;
+}
+#inlab-cats-cont .grid-container{
+    display: grid;
+}
+#inlab-cats-cont img{
+    border-radius: 5px;
+}
+
+
+/* temp equipment css */
+/* Stylesheet for the homepage grid items */
+a.homepage-grid-link:link, a.homepage-grid-link:visited, a.homepage-grid-link:hover, a.homepage-grid-link:active {
+    text-decoration: none;
+    color: #000;
+}
+.grid-container {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 1fr;
+    user-select: none;
+    display: none; /* Hide the grid by default */
+}
+.grid-item {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 0 #ccc;
+    margin: 5%;
+    padding: 5%;
+    text-align: center;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.grid-item:hover {
+    box-shadow: 5px 5px 10px 0 #aaa;
+}
+.category-titlebar {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px -1px #ccc;
+    margin: 5px;
+    padding: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+}
+.category-titlebar:hover {
+    box-shadow: 3px 3px 6px 0 #aaa;
+}
+.titlebar-title {
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: bold;
+}
+.titlebar-hideshowbutton {
+    vertical-align: middle;
+    font-size: 100%;
+    color: #00aa9188;
+    user-select: none;
+}
+img.grid-item-image {
+    max-width: 95%;
+    max-height: 95%;
+}
+.grid-item-title {
+    align-self: flex-start;
+    width: 95%;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5%;
+    text-align: center;
+}
+.grid-item-image {
+    vertical-align: bottom;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    } /* 2 columns on mobile */
+}
