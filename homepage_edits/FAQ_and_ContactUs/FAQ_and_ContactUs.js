@@ -74,20 +74,30 @@ var hideShow_ContactUs = function(event) {
 
 // Function to hide/show the FAQ answers
 var hideShow_FAQ_answer = function(event) {
+    // Get FAQ question wrapper
+    let FAQ_wrapper = event.currentTarget.parentNode;
     // Get FAQ answer
-    let FAQ_answer = event.currentTarget.parentNode.querySelector(".FAQ_answer");
+    let FAQ_answer = FAQ_wrapper.querySelector(".FAQ_answer");
     // Get FAQ arrow (child with class="FAQ_Question_hideShow")
-    let FAQ_arrow = event.currentTarget.parentNode.querySelector(".FAQ_Question_hideShow");
+    let FAQ_arrow = FAQ_wrapper.querySelector(".FAQ_Question_hideShow");
+    // Get FAQ question bar (child with class="FAQ_question-bar")
+    let FAQ_question_bar = FAQ_wrapper.querySelector(".FAQ_question-bar");
     // if FAQ arrow up
     if (FAQ_arrow.innerHTML === "▲") {
         // Change FAQ arrow to down
         FAQ_arrow.innerHTML = "▼";
         // Show FAQ answer
         FAQ_answer.style.display = "block";
+        // Change active attribute to true
+        FAQ_question_bar.setAttribute("active", "true");
+        FAQ_wrapper.setAttribute("active", "true");
     } else {
         // Change FAQ arrow to up
         FAQ_arrow.innerHTML = "▲";
         // Hide FAQ answer
         FAQ_answer.style.display = "none";
+        // Change active attribute to false
+        FAQ_question_bar.setAttribute("active", "false");
+        FAQ_wrapper.setAttribute("active", "true");
     };
 }
